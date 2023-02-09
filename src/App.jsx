@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Container } from "./components/Container";
 import { TaskCreator } from "./components/TaskCreator";
 import { TaskTable } from "./components/TaskTable";
+import { TaskBanner } from "./components/TaskBanner";
 import { VisibilityControl } from "./components/VisibilityControl";
 function App() {
   const [userName, setUserName] = useState("Lee");
