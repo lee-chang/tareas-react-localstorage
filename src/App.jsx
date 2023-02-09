@@ -4,6 +4,7 @@ import { TaskCreator } from "./components/TaskCreator";
 import { TaskTable } from "./components/TaskTable";
 import { VisibilityControl } from "./components/VisibilityControl";
 function App() {
+  const [userName, setUserName] = useState("Lee");
   const [taskItems, setTaskItems] = useState([]);
   const [showCompleted, setShowCompleted] = useState(false);
 
@@ -38,6 +39,7 @@ function App() {
   return (
     <main className="bg-dark vh-100 text-white">
       <Container>
+        <TaskBanner userName={userName} taskItems={taskItems} />
         <TaskCreator createNewTask={createNewTask} />
         <TaskTable
           title="Tareas pendientes"
